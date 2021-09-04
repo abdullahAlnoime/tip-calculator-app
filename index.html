@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,25 +8,43 @@
   <title>Frontend Mentor | Tip calculator app</title>
   <link rel="stylesheet" href="./style/main.css" />
 </head>
+
 <body>
   <div class="container">
-    Bill
-    Select Tip %
-    5%
-    10%
-    15%
-    25%
-    50%
-    Custom
-    Number of People
-    Tip Amount
-    / person
-    Total
-    / person
-    Reset
+    <img src="./images/logo.svg" alt="logo" />
+    <div class="body-calc">
+      <div class="bill">
+        <p>Bill</p>
+        <input type="text" oninput="return onlynum()" id="bill" />
+        <img src="./images/icon-dollar.svg" alt="icon dollar" />
+        <span></span>
+      </div>
+      <div class="num-people">
+        <p>Number of People</p>
+        <input type="text" oninput="return onlynum()" value="1" id="numOfPeople" />
+        <img src="./images/icon-person.svg" alt="icon person" />
+        <span></span>
+      </div>
+      <div class="tip">
+        <p>Select Tip %</p>
+        <span>5%</span>
+        <span>10%</span>
+        <span class="clicked">15%</span>
+        <span>25%</span>
+        <span>50%</span>
+        <span>Custom</span>
+      </div>
+      <div class="result">
+        <p>Tip Amount<br/><span>/ person</span></p>
+        <p>$0.00</p>
+        <p>Total<br /><span>/ person</span></p>
+        <p>$0.00</p>
+        <button>Reset</button>
+      </div>
+    </div>
     <div class="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-      Coded by <a href="#">Your Name Here</a>.
+      Coded by <a href="#">Abdullah Alnoime</a>.
     </div>
   </div>
   <script src="./script/main.js"></script>

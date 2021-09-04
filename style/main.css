@@ -1,7 +1,167 @@
-
-
+@font-face {
+  font-family: "SpaceMono-Regular" ;
+  src: url("../font/SpaceMono-Regular.ttf") ;
+}
+@font-face {
+  font-family: "SpaceMono-Bold";
+  src: url("../font/SpaceMono-Bold.ttf") ;
+}
+* {
+  box-sizing: border-box ;
+  font-family: "SpaceMono-Regular" ;
+}
+body {
+  background-color: hsl(185, 41%, 84%) ;
+  margin: 0px ;
+  font-size: 16px ;
+}
+.container > img {
+  width: 25% ;
+  margin: 30px 37.5% ;
+}
+.body-calc {
+  width: 100% ;
+  padding: 30px 20px ;
+  border-radius: 40px 40px 0 0 ;
+  background-color: white ;
+}
+.bill , 
+.num-people {
+  position: relative ;
+}
+.bill input , 
+.num-people input {
+  width: 100% ;
+  color: hsl(183,100%,15%) ;
+  border: 1px solid transparent ;
+  font-family: "SpaceMono-Bold" ;
+  font-size: 18px ;
+  direction: rtl ;
+  background-color: hsl(189,41%,97%) ;
+  border: none ;
+  border-radius: 4px ;
+  padding: 10px 8px 10px 30px ;
+}
+.bill input:focus , 
+.num-people input:focus {
+  outline: none ;
+}
+.bill img ,
+.num-people img {
+  width: 12px ;
+  position: absolute ;
+  left: 14px ;
+  bottom: 15px ;
+}
+.bill span ,
+.num-people span {
+  position: absolute ;
+  top: -10px ;
+  right: 0 ;
+  color: #FF2222 ;
+  font-size: 13px ;
+  margin-top: 10px ;
+}
+.tip {
+  display: flex ;
+  justify-content: space-between ;
+  flex-wrap: wrap ;
+}
+.tip ,
+.num-people ,
+.bill {
+  margin-bottom: 40px ;
+}
+.tip p ,
+.bill p ,
+.num-people p {
+  font-family: "SpaceMono-Bold" ;
+  width: 100% ;
+  font-size: 14px ;
+  color: #3D6666 ;
+}
+.tip span {
+  width: 49% ;
+  display: flex ;
+  margin-bottom: 2% ;
+  cursor: pointer ;
+  border-radius: 4px ;
+  padding: 10px 15px ;
+  justify-content: center ;
+  align-items: center ;
+  color: #FFF ;
+  background-color: hsl(183,100%,15%) ;
+  font-family: "SpaceMono-Bold" ;
+}
+.tip span:last-of-type {
+  color: #3D6666 ;
+  background-color: hsl(189,41%,97%) ;
+}
+.tip span.clicked {
+  background-color: hsl(172, 67%, 45%);
+  color: #3D6666;
+}
+.result {
+  display: flex ;
+  margin-bottom: 10px ;
+  justify-content: space-between ;
+  align-items: center ;
+  flex-wrap: wrap ;
+  background-color: hsl(183,100%,15%) ;
+  padding: 20px ;
+  border-radius: 10px ;
+}
+.result p {
+  width: 48% ;
+  margin: 0 ;
+  display: flex ;
+  justify-content: flex-end ;
+  align-items: center ;
+  padding: 10px 15px ;
+  margin-bottom: 2% ;
+}
+.result p:nth-of-type(odd) {
+  justify-content: flex-start ;
+  flex-wrap: wrap ;
+  color: white ;
+  font-family: "SpaceMono-Bold" ;
+  font-size: 14px ;
+}
+.result p:nth-of-type(odd) > span {
+  color: hsl(185, 41%, 84%) ;
+  font-size: 12px ;
+  width: 100% ;
+}
+.result p:nth-of-type(even) {
+  width: 48% ;
+  color: hsl(172, 67%, 45%) ;
+  font-size: 30px ;
+}
+.result p:nth-of-type(even) img {
+  margin-right: 5px ;
+}
+.result button {
+  padding: 10px 15px ;
+  margin-top: 20px ;
+  background-color: hsl(172, 67%, 45%) ;
+  border: none ;
+  font-family: "SpaceMono-Bold" ;
+  color: hsl(183,100%,15%) ;
+  text-transform: uppercase ;
+  font-size: 18px ;
+  border-radius: 4px ;
+  width: 94% ;
+  margin-left: 3% ;
+  margin-bottom: 20px ;
+}
+.result button:focus {
+  outline: none ;
+}
 .attribution {
-  font-size: 11px;
+  font-size: 10px;
+  background-color: white ;
+  margin: 0px ;
+  padding: 10px ;
   text-align: center;
 }
 
