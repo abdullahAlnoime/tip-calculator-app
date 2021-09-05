@@ -13,29 +13,31 @@
   <div class="container">
     <img src="./images/logo.svg" alt="logo" />
     <div class="body-calc">
-      <div class="bill">
-        <p>Bill</p>
-        <input type="text" oninput="return onlynum()" id="bill" />
-        <img src="./images/icon-dollar.svg" alt="icon dollar" />
-        <span></span>
+      <div class="left-side">
+        <div class="bill">
+          <p>Bill</p>
+          <input type="text" oninput="return billNum()" id="bill" />
+          <img src="./images/icon-dollar.svg" alt="icon dollar" />
+          <span></span>
+        </div>
+        <div class="tip">
+          <p>Select Tip %</p>
+          <span>5%</span>
+          <span>10%</span>
+          <span>15%</span>
+          <span>25%</span>
+          <span>50%</span>
+          <input type="text" id="custom" value="Custom" />
+        </div>
+        <div class="num-people">
+          <p>Number of People</p>
+          <input type="text" oninput="return peopleNum()" value="1" id="numOfPeople" />
+          <img src="./images/icon-person.svg" alt="icon person" />
+          <span></span>
+        </div>
       </div>
-      <div class="num-people">
-        <p>Number of People</p>
-        <input type="text" oninput="return onlynum()" value="1" id="numOfPeople" />
-        <img src="./images/icon-person.svg" alt="icon person" />
-        <span></span>
-      </div>
-      <div class="tip">
-        <p>Select Tip %</p>
-        <span>5%</span>
-        <span>10%</span>
-        <span class="clicked">15%</span>
-        <span>25%</span>
-        <span>50%</span>
-        <span>Custom</span>
-      </div>
-      <div class="result">
-        <p>Tip Amount<br/><span>/ person</span></p>
+      <div class="result right-side">
+        <p>Tip Amount<br /><span>/ person</span></p>
         <p>$0.00</p>
         <p>Total<br /><span>/ person</span></p>
         <p>$0.00</p>

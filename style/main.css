@@ -19,6 +19,12 @@ body {
   width: 25% ;
   margin: 30px 37.5% ;
 }
+@media (min-width: 500px) {
+  .container > img {
+    width: 15% ;
+    margin: 150px 42.5% 50px ;
+  }
+}
 .body-calc {
   width: 100% ;
   padding: 30px 20px ;
@@ -41,6 +47,10 @@ body {
   border: none ;
   border-radius: 4px ;
   padding: 10px 8px 10px 30px ;
+}
+.bill input:hover ,
+.num-people input:hover {
+  box-shadow: 0 0 0 3px hsl(185, 41%, 84%) ;
 }
 .bill input:focus , 
 .num-people input:focus {
@@ -93,11 +103,28 @@ body {
   background-color: hsl(183,100%,15%) ;
   font-family: "SpaceMono-Bold" ;
 }
-.tip span:last-of-type {
+.tip span:hover ,
+.tip input:hover {
+  background-color: hsl(185, 41%, 84%) ;
+  color: #3D6666 ;
+}
+.tip input {
+  width: 49% ;
+  border: none ;
+  cursor: pointer ;
+  text-align: center ;
+  font-size: 16px ;
+  font-family: "SpaceMono-Bold" ;
+  height: 47px ;
+  border-radius: 4px ;
   color: #3D6666 ;
   background-color: hsl(189,41%,97%) ;
 }
-.tip span.clicked {
+.tip input:focus {
+  outline: none ;
+}
+.tip span.clicked ,
+.tip input.clicked {
   background-color: hsl(172, 67%, 45%);
   color: #3D6666;
 }
@@ -109,7 +136,7 @@ body {
   flex-wrap: wrap ;
   background-color: hsl(183,100%,15%) ;
   padding: 20px ;
-  border-radius: 10px ;
+  border-radius: 15px ;
 }
 .result p {
   width: 48% ;
@@ -143,7 +170,8 @@ body {
 .result button {
   padding: 10px 15px ;
   margin-top: 20px ;
-  background-color: hsl(172, 67%, 45%) ;
+  background-color: #3D6666 ;
+  cursor: no-drop ;
   border: none ;
   font-family: "SpaceMono-Bold" ;
   color: hsl(183,100%,15%) ;
@@ -157,6 +185,13 @@ body {
 .result button:focus {
   outline: none ;
 }
+.result button.active {
+  background-color: hsl(172, 67%, 45%) ;
+}
+.result button:hover {
+  background-color: hsl(185, 41%, 84%) ;
+  color: #3D6666;
+}
 .attribution {
   font-size: 10px;
   background-color: white ;
@@ -167,4 +202,27 @@ body {
 
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+@media (min-width: 500px) {
+  .body-calc {
+    display: flex;
+    padding: 20px ;
+    justify-content: space-between;
+    width: 85%;
+    margin: 50px auto;
+    border-radius: 15px;
+  }
+  .left-side {
+    width: 49% ;
+  }
+  .tip , .num-people , .bill {
+    margin-bottom: 0 ;
+  }
+  .result button {
+    margin-top: 50px ;
+  }
+  .right-side {
+    width: 49% ;
+    margin-bottom: 0 ;
+  }
 }
